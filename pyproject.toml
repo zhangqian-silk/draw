@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drawbot"
+version = "0.1.0"
+description = "OpenAI-assisted mouse drawing helper for guessing games."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "openai>=2.28.0",
+]
+authors = [
+  { name = "Codex" }
+]
+
+[project.scripts]
+drawbot = "drawbot.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
